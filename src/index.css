@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-dark {
+  background-color: #282C34  !important;
+}
+.ReactDefaultS {
+  display: flex;
+}
+.ReactDefaultS div{
+  width: 100%;
+}
