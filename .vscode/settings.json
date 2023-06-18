@@ -1,0 +1,8 @@
+{
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 0,
+    "editor.cursorSurroundingLinesStyle": "default",
+    "editor.cursorWidth": 0,
+    "editor.find.autoFindInSelection": "never"
+}

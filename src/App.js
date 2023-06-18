@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -12,29 +13,29 @@ import Persons from "./components/Persons";
 
 function App() {
 	const players = [
-		{ name: 'Ridoy' , roles: 'Best Bowler And Finisher' },
-		{ name: 'Rakib' , roles: 'Best Bowler And Hard Hitter' },
-		{ name: 'Afjal' , roles: 'Best Batsman' },
-		{ name: 'Emon' , roles: 'Best Batsman' },
+		{ name: 'Ridoy', roles: 'Best Bowler And Finisher' },
+		{ name: 'Rakib', roles: 'Best Bowler And Hard Hitter' },
+		{ name: 'Afjal', roles: 'Best Batsman' },
+		{ name: 'Emon', roles: 'Best Batsman' },
 		{ name: 'Minhaj', roles: 'Best Alrounder' },
-		{ name: 'Imran' , roles: 'Best Alrounder' },
-		{ name: 'Evan', roles: 'Best Batsman'}
-		];
+		{ name: 'Imran', roles: 'Best Alrounder' },
+		{ name: 'Evan', roles: 'Best Batsman' }
+	];
 	const productList = [
-		{ name: 'Aam'     , price: '$6.99' },
-		{ name: 'Jam'     , price: '$6.99' },
-		{ name: 'Kthal'   , price: '$6.99' },
-		{ name: 'Lichu'   , price: '$6.99' },
-		{ name: 'Dragon'  , price: '$6.99' },
-		{ name: 'Banana'  , price: '$6.99' },
-		{ name: 'Anarosh' , price: '$1.99' }
+		{ name: 'Aam', price: '$6.99' },
+		{ name: 'Jam', price: '$6.99' },
+		{ name: 'Kthal', price: '$6.99' },
+		{ name: 'Lichu', price: '$6.99' },
+		{ name: 'Dragon', price: '$6.99' },
+		{ name: 'Banana', price: '$6.99' },
+		{ name: 'Anarosh', price: '$1.99' }
 	];
 	const playerName = players.map(ply => ply.name);
 	console.log(playerName);
 	// let person = [];
 	fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(data => showPerson(data))
+		.then(response => response.json())
+		.then(data => showPerson(data))
 	// console.log(data); 
 	function showPerson(data) {
 		// console.log(data);
@@ -52,6 +53,7 @@ function App() {
 			<div className="App">
 				<header className="App-header">
 					<main>
+						<Counter/>
 						{/* <MathInHtml/> */}
 						{/* <CardDark  /> */}
 						<div>
@@ -63,22 +65,21 @@ function App() {
 									players.map(ply => <div>{ply.name}</div>)
 								}
 							</ul> */}
-							
-								{
-									productList.map(pd => 
+
+							{
+								productList.map(pd =>
 									<div>
 										<Products product={pd} />
-										
+
 										{/* {pd.name} */}
 									</div>)
-								}
-								{
-									person.map(ps => 
+							}
+							{/* {
+								person.map(ps =>
 									<Persons person={ps} />
-									)
-									
-								}
-							
+								)
+							} */}
+
 						</div>
 						<div className="">
 							<Card1 title="Shakib" text="Best Cricketer" />
@@ -93,6 +94,20 @@ function App() {
 					</main>
 				</header>
 			</div>
+		</>
+	);
+}
+function Counter() {
+	const [count, setCount] = useState(0);
+	let handleIncriment = () => {
+		let newCount = count + 1;
+		setCount(newCount);
+	};
+	return (
+		<>
+			<h1>Counter: {count}</h1>
+			<button onMouseMove={() => setCount(count - 1)} type="button" className="btn btn-danger me-1">Decriment - </button>
+			<button onMouseMove={handleIncriment} type="button" className='btn btn-warning ms-1' >Incriment + </button>
 		</>
 	);
 }
