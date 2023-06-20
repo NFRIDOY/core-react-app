@@ -10,16 +10,17 @@ import Card1 from "./components/Cardx";
 import Card2 from "./components/Cardx";
 import Products from "./components/Products";
 import Persons from "./components/Persons";
+import Counter from "./components/Counter";
 
 function App() {
 	const players = [
-		{ name: 'Ridoy', roles: 'Best Bowler And Finisher' },
-		{ name: 'Rakib', roles: 'Best Bowler And Hard Hitter' },
-		{ name: 'Afjal', roles: 'Best Batsman' },
-		{ name: 'Emon', roles: 'Best Batsman' },
-		{ name: 'Minhaj', roles: 'Best Alrounder' },
-		{ name: 'Imran', roles: 'Best Alrounder' },
-		{ name: 'Evan', roles: 'Best Batsman' }
+		{ name: 'Ridoy' , roles: 'Best Bowler And Finisher'    },
+		{ name: 'Rakib' , roles: 'Best Bowler And Hard Hitter' },
+		{ name: 'Afjal' , roles: 'Best Batsman'                },
+		{ name: 'Emon'  , roles: 'Best Batsman'                },
+		{ name: 'Minhaj', roles: 'Best Alrounder'              },
+		{ name: 'Imran' , roles: 'Best Alrounder'              },
+		{ name: 'Evan'  , roles: 'Best Batsman'                }
 	];
 	const productList = [
 		{ name: 'Aam', price: '$6.99' },
@@ -97,19 +98,19 @@ function App() {
 		</>
 	);
 }
-function Counter() {
-	const [count, setCount] = useState(0);
-	let handleIncriment = () => {
-		let newCount = count + 1;
-		setCount(newCount);
-	};
-	return (
-		<>
-			<h1>Counter: {count}</h1>
-			<button onMouseMove={() => setCount(count - 1)} type="button" className="btn btn-danger me-1">Decriment - </button>
-			<button onMouseMove={handleIncriment} type="button" className='btn btn-warning ms-1' >Incriment + </button>
-		</>
-	);
-}
+// function Counter() {
+// 	const [count, setCount] = useState(0);
+// 	let handleIncriment = () => {
+// 		let newCount = count + 1;
+// 		setCount(newCount);
+// 	};
+// 	return (
+// 		<>
+// 			<h1>Counter: {count}</h1>
+// 			<button onMouseMove={() => setCount(count - 1)} type="button" className="btn btn-danger me-1">Decriment - </button>
+// 			<button onMouseMove={handleIncriment} type="button" className='btn btn-warning ms-1' >Incriment + </button>
+// 		</>
+// 	);
+// }
 
 export default App;
