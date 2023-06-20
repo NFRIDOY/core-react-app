@@ -1,0 +1,22 @@
+.boxStyle {
+    color: black;
+    width: 32rem;
+    height: auto;
+    margin: 0.5rem;
+    padding: 20px;
+    border: 0.3px solid black;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8E7D9;
+    box-shadow: inset 6px -10px #FFCDD2;
+    transition: all ease-out;
+    cursor: pointer;
+}
+
+.boxStyle:hover {
+    transform: scale(0.9);
+    box-shadow: inset 6px -10px rgba(255, 255, 255, 0.5);
+}

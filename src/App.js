@@ -11,6 +11,7 @@ import Card2 from "./components/Cardx";
 import Products from "./components/Products";
 import Persons from "./components/Persons";
 import Counter from "./components/Counter";
+import Users from "./components/Users";
 
 function App() {
 	const players = [
@@ -25,7 +26,7 @@ function App() {
 	const productList = [
 		{ name: 'Aam', price: '$6.99' },
 		{ name: 'Jam', price: '$6.99' },
-		{ name: 'Kthal', price: '$6.99' },
+		{ name: 'Kathal', price: '$6.99' },
 		{ name: 'Lichu', price: '$6.99' },
 		{ name: 'Dragon', price: '$6.99' },
 		{ name: 'Banana', price: '$6.99' },
@@ -34,18 +35,18 @@ function App() {
 	const playerName = players.map(ply => ply.name);
 	console.log(playerName);
 	// let person = [];
-	fetch('https://jsonplaceholder.typicode.com/users')
-		.then(response => response.json())
-		.then(data => showPerson(data))
+	// fetch('https://jsonplaceholder.typicode.com/users')
+	// 	.then(response => response.json())
+	// 	.then(data => showPerson(data))
 	// console.log(data); 
-	function showPerson(data) {
-		// console.log(data);
-		// data.map(dt => dt.name)
-		let person = data;
-		// console.log(person);
-		person.map(pr => console.log(pr.name));
-		return person;
-	}
+	// function showPerson(data) {
+	// 	// console.log(data);
+	// 	// data.map(dt => dt.name)
+	// 	let person = data;
+	// 	// console.log(person);
+	// 	person.map(pr => console.log(pr.name));
+	// 	return person;
+	// }
 	// let person = showPerson();
 	// console.log(person);
 	return (
@@ -54,6 +55,7 @@ function App() {
 			<div className="App">
 				<header className="App-header">
 					<main>
+						<Users/>
 						<Counter/>
 						{/* <MathInHtml/> */}
 						{/* <CardDark  /> */}
