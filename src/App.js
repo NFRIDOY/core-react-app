@@ -12,6 +12,7 @@ import Products from "./components/Products";
 import Persons from "./components/Persons";
 import Counter from "./components/Counter";
 import Users from "./components/Users";
+import Cars from "./components/Cars";
 
 function App() {
 	const players = [
@@ -31,6 +32,15 @@ function App() {
 		{ name: 'Dragon', price: '$6.99' },
 		{ name: 'Banana', price: '$6.99' },
 		{ name: 'Anarosh', price: '$1.99' }
+	];
+	const carList = [
+		{ name: 'BMW', price: '$6000.99' },
+		{ name: 'Porche', price: '$6000.99' },
+		{ name: 'Lamborgini', price: '$6000.99' },
+		{ name: 'Farrari', price: '$6000.99' },
+		{ name: 'a', price: '$6000.99' },
+		{ name: 'b', price: '$6000.99' },
+		{ name: 'c', price: '$6000.99' }
 	];
 	const playerName = players.map(ply => ply.name);
 	console.log(playerName);
@@ -55,6 +65,12 @@ function App() {
 			<div className="App">
 				<header className="App-header">
 					<main>
+						{
+							carList.map((car) => {
+								<Cars carObj={car} />
+								// console.log(car);
+							})
+						}
 						<Users/>
 						<Counter/>
 						{/* <MathInHtml/> */}
@@ -71,11 +87,12 @@ function App() {
 
 							{
 								productList.map(pd =>
-									<div>
+									
 										<Products product={pd} />
 
-										{/* {pd.name} */}
-									</div>)
+										
+									
+									)
 							}
 							{/* {
 								person.map(ps =>

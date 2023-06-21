@@ -34,11 +34,13 @@ export default function Users() {
   // users.map(()=> console.log(users));
   return (
     <>
-      <div >Users : {users.length}</div>
-      <div>
-        {
-          users.map((users) => <div className='usersStyle'>{users.name}</div>)
-        }
+      <div className='usersStyle'>
+        <div >Users : {users.length}</div>
+        <div>
+          {
+            users.map((users) => <div >{users.name}</div>)
+          }
+        </div>
       </div>
     </>
   )
