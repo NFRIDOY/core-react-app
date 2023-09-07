@@ -42,7 +42,7 @@ function App() {
 		{ name: 'b', price: '$6000.99' },
 		{ name: 'c', price: '$6000.99' }
 	];
-	const playerName = players.map(ply => ply.name);
+	const playerName = players.map(player => player.name);
 	console.log(playerName);
 	// let person = [];
 	// fetch('https://jsonplaceholder.typicode.com/users')
